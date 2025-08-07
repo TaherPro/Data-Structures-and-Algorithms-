@@ -1,0 +1,41 @@
+"Big O Notation": is a mathematical notation that we use to describe the performance in time and space complexity of algorithm.
+
+
+- Time Complexity: Tells how fast does your code run. 'running loop or we're moving' → applies to algorithms
+- Space Complexity: Tells how much memory does your code take. 'we're sorting anything' → applies to both algorithms and data structures
+
+Asymptotic analysis: used to evaluate the quality of algorithm
+
+----------------------------------------------------------
+COMMON Complexities
+- Constant - O(1) →  algorithm will take the same amount of time to execute regardless of the size of the input. 'Time stays the same even with large input' 
+    - Accessing list / array / element at index
+    - Accessing element in dictionary / hash
+- Logarithmic - O(log n) → algorithm's time inceases slowly as the input size increases. Excludes 1/2 of the input with each iteration of loop.
+    - Binary Search 
+    - Binary Search Tree Traversal (BST)
+    - Divide and Conquer Algorithms
+- Linear - O(n) → algorithm will grow in time or space directly proportional to the input size. The complexity increases at the same rate the input increases.
+    - Looping over a list, dictionary, string
+    - Counting up/down from 1-n
+    - Linear Search 
+    - Finding element in an unsorted list
+- Linearithmic - O(n log n) → algorithm will grow in time or space complextiy proportional to n log n of input size. The input size is multiplied by the log of the input size.
+    - Sorting 'Merge Sort, Heap Sort, Quick Sort'
+- Quadratic - O(n²) → 
+    - Nested Loops
+    - Bubble Sort
+    - Selection Sort
+    - Insertion Sort
+
+----------------------------------------------------------
+COMMON Approach to Optimize Performance
+* Using Hash table for quick lookups. O(1) average
+    - Efficient for sorting and retriving values by key → Counting Frequencies 
+    - Checking for Duplicates or Membership  
+
+* Two Pointers approach for ordered sequences. 
+    - Often used with sorted arrays or strings → Finding pairs with specific sum 
+    - Avoid nested loops and reduce time → Merge Intervals 
+
+
