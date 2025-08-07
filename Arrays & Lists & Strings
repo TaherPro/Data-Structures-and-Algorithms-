@@ -1,0 +1,144 @@
+"ARRAYS" () are Dynamic List in python 
+- are a sequence of same-type elements and they're mutable - ordered - indexed - iterable
+
+* used when we
+    - working with large numeric data
+    - want better performance and memory efficiency 
+    - items are the same type (all integers or all floats)
+
+* EX
+    - scientific computing (better with NumPy)
+    - storing sensor values or numerical data [10, 13, 22]
+    - doing math operations on large sequences
+
+    
+* ARRAYS Mehtods
+.append(x): add an item to the end of the list
+.remove(x): remove an item by value 
+.pop(x): remove an item by index
+.del array[i]
+
+
+* Arrays Opperations
+- Insertion: adding a new element to the array at spcific position
+		beginning → arr.insert(0, x)
+		middle → arr.insert(n//2, x)
+		end → arr.insert(len(arr), x)
+		    → arr.append(x) 
+		    
+		def insert_manual(arr, value, index):
+        arr.append(None)            # add space 'None' at the end of the array => [10, 20, 30, 40, None]
+        for i in range(len(arr)-1, index, -1): # We loop backwards from the last index to the position after the insertion index.
+            arr[i] = arr[i -1]      # We move the element at position i - 1 into position i  => [None, 10, 20, 30, 40]
+        arr[index] = value          # now insert the new value at the target index.
+        return arr                  # return the new array => [5, 10, 20, 30, 40]
+		    
+- Deletion:
+    def delete_manual(arr, index): 
+        if index < 0 or index >= len(arr): # check if the index is negative, or is too large (outside the list bounds)
+            return "invalid index"  
+        for i in range(index, len(arr) -1):   # loop to get the need index in arr for left to right
+            arr[i] = arr[i + 1]               # once we got the index, move it the end of the array 
+        arr.pop()                             # remove it from array using pop method
+        return arr                            # retunr the new array 
+
+- Searching:
+	1. Linear Search for unsorted array: loop through each element until we find the value. O(n)
+  2. Binary Search for sorted array: dividing the array. Better solution O(logn)
+    def binary_search(arr, target):
+        low, high = 0, len(arr)- 1      # initialize search boundaries
+        while low <= high:              # repeat while seach is valid, until low becomes greater than high
+            mid = (low + high) // 2     # calculates the middle index of the current search range.
+            if arr[mid] == target:      # if middle index is equal target, return this index
+                return mid  
+            elif arr[mid] < target:     # if middle index is less than target, search in right half
+                low = mid + 1       
+            else:                       # if middle index is greater than target, search in left half
+                high = mid - 1
+        return -1                       # target not found.
+        
+- Traversal:
+		1. Forward Traversal (left to right)
+    for i in range(len(arr)):
+        print(arr[i], end=" ")
+    2. Reverse Traversal (right to left)
+    for in range(len(arr) -1, -1, -1):  # -1 means start from last index, stop befor index -1, move backwards
+        pint(arr[i], end=" ")       
+    3. Direct element access
+    for item in arr:
+        print(item, end=" ")
+    4. Traversal with index and value using enumerate()
+    for index, value in enumerate():   # prints the index and its value
+        print(f"index {index}: value {value}")
+    5. Using while loop: for dynamic iteration condition    
+_______________________________________________________________
+LIST [] 
+- are a sequence of elements could be mixed types and they're mutable - ordered - indexed - iterable
+
+* used when we
+    - need a flexible, general-purpose collection
+    - might store mixed types (numbers, strings)
+    - need to add/remove items frequently 
+* EX
+    - storing items in cart ["apple", "banana", "milk"]
+    - looping through numbers or names
+    - storing results or intermedite values
+
+* LIST Mehtods
+.append(x): add an item to the end of the list
+.insert(i, x): add an item at any index
+.remove(x): remove an item by value 
+.pop(x): remove an item by index
+.sort(x): sort the list in ascending order and doesnt return any value
+del list[i]:
+
+* Traversing Mehtods
+- for loop: visiting each element in the list
+- while loop: for dynamic iteration condition
+- range(): get the index element
+- enumerate(): get the indices and values 
+________________________________________________________________
+
+STRING ""
+
+- strings are a sequence of characters and they're immutable - ordered - indexed - iterable
+
+
+WHAT to do with strings
+- count how many times a character appears in a sentens 
+- count how many times a substring appears in a string
+- turn lower case to upper case and vice versa
+- check if a sentence starts with certain word
+- combine two strings to become full sentence
+
+
+* used when we 
+    - work with text or characters
+    - don't need to modify the characters directly 
+    - want to do searching, slicing, or formatting 
+
+* EX
+    - reversing a word: 'hello' → 'olleh'
+    - checking if a string is a palindrome
+    - searching for a word or character in text
+    - parsing input 
+
+* STRING Methods
+s.lower(): return s as a lowercase string and accepts no parameters
+s.upper(): return s as a uppercase string and accepts no parameters
+s.split(): split the string into list 
+s.join() join the list into a string
+s.strip(character): removes the whitespace or spicified character from the end of the string 
+f-strings: allow us to inset variable experssions into string
+
+* Traversing Mehtods
+- for loop: visiting each char in the string
+- while loop: for dynamic iteration condition
+- range(len()): get the index element
+- enumerate(): get the indices and char 
+
+* Techniques to use O(n)
+1. Two Pointers
+2. Sliding Window
+3. Hash Map or Set
+4. Sorting + Binary Search
