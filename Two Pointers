@@ -1,0 +1,59 @@
+"TWO POINTERS"
+
+Two Pointers: technique that intialize two pointer variable to track differnet indices or places in a list or string and move them to new indices based on certain conditions.
+        - Opposite Direction Pointers: first variable points at the beginning and second points at the end, they move towards each other.
+        - Same Direction Pointers: first variable points to the beginning of the first list or string and second points to the beginning of the second list or string, to keep track of values in two lists at the same time. (sliding window / fast-slow)
+
+When to choose Two-Pinters Technique:
+        - Data Strucutres → used for strings, arrays, and linked lists.
+        - Reducing Nested Loops → used to approve solutions like 'brute force' that use multiple for loops, by eliminate repetitive calculations.
+        - Searching for Pairs or Triplets → to find pairs or triplets in a sorted array that satisfy certian conditions.
+        - In Place Operations → used when performing operations on a squence in place, without creating extra data structures to hold the result.
+        - Compairing Opposite Ends of Sequence → if the problem involive compairing or processing elements from both ends of sequence.
+        - Partitiong Problems → if the problem requires dividing or partitioning the data into multiple parts.
+
+        
+Opposite Direction Pointers keywords: "while loop"
+- Palindrome - symmetry - reverse - sorted array - compare elements from both ends - minimize difference between pairs - container with most water - remove duplicates
+    
+    left, right = 0, len(arr) -1
+    while left < right:
+
+    
+Edge Cases:
+- Empty input / one character
+- Even vs Odd length
+- Already matched or sorted
+- Skipping characters
+
+
+Same Direction Pointers keywords: "for loop / while"
+- longest substring/sequence - sliding window - at most/at least/exactly K - subarray with sum - find window - find duplicate - min/max window size - fast and slow pointer - cycle detection
+
+    left = 0 
+    for right in range(len(arr)):
+    
+Edge Cases: (sliding window / fast-slow)
+- Window size zero or too large
+- Repated elements
+- Fast pointer goes out off bounds
+- Infinite loops
+
+
+ Ask Clarifing Queations:
+
+- Am I working with a sorted list or string?
+- Am I trying to optimize nested loops (brute force → O(n²) → O(n))?
+- Am I trying to track a range (like subarray or window)?
+- Am I comparing two positions or two elements simultaneously?
+
+----------------------
+Where to apply the two pointer pattern
+- Sorted Sequence 
+- Compare/Combine Elements
+- Track two positions 
+- Move/Shrink Window
+- String, Array, Linked List DS
+- Reduce Nested Loops
+- Searching for pairs or triplets
+- Partitioning Problems
