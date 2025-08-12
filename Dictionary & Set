@@ -1,0 +1,46 @@
+"Hashing || Dictionary {}" used to store data as a {key, value pairs}
+    - you need to store key-value pairs (frequency, mapping, index)
+    - you need to count things
+    - you need to associate extra data with an element (like its index or position)
+    - you care about how many times sth appears
+    - you want group items by key (like group anagrams, bucket sort)
+
+Notes
+- Python dictionaries use dynamic resizing — they grow in size (like arrays) when needed.
+- They are optimized for fast inserts and lookups, even if that means using more memory.
+
+Infinity 
+- used to represent a number that is larger than any other numeric value. You typically use it in comparisons, default initialization for min/max problems, and edge cases in algorithms.
+- Used in problems where you track the min or max value.
+
+* OPERATIONS:
+- Accessing elements: - Directe access using key [] → if key is not found rasie KeyError
+                      - Using get() method → if key is not found returns None
+                      
+- Pop Method(key, defult_val): the key of item and defult value to remove
+- keys(): returns a list of the keys in the dictionary
+- values(): returns a list of values in the dictionary
+- items(): returns a list of key-value pairs in the dictionary
+________________________________________________________________
+"Sets {}" a collection of unique elements.  'Unordered - Unique - Mutable - Iterable'
+Sets are a built-in data structure in Python that represent an unordered collection of unique elements.  
+		- used to track seen values, eliminate duplicates, and find overlap between multiple pieces of data. 
+		- used to care presence/absence(not how many times)
+    - you need unique values(elemenate duplicates)
+    - you needa collection of unique elements. check membership fast
+    - you're doing intersection, union, differnce operations
+    - you're trying to detect duplicates or cycles
+    
+    
+    
+* Sets METHODS
+- .add(element): Adds an element to the set
+- .remove(element): Removes an element from the set. Raises a KeyError if the element is not found
+- .discard(element): Removes an element if it is present.
+- .clear(): Reomves all elements from the set
+- .update(iterable): (add muiltiple items)
+- element in set (membership check)
+- len(set): (count items)
+
+* Operations
+- for item in set (looping): Traversing a set                
