@@ -1,0 +1,29 @@
+"STACKS" a collection of elements that follows the LIFO principle.
+
+    - use List data type, and Last in First out (LIFO) principle.
+    - use list and collections.deque Both support fast .append() and .pop() from the end of the list.
+    - use append() method for adding an element by pushing and pop() to remove an element → O(1) Time Complexity.
+    - Use dictionary with stack in problems where we need to do quick lookups or mapping. "they combine structure + speed"
+
+When to choose stack DS:
+    - Reversing Data → reversing the order of sequence like List or String
+    - Balancing Symbols → checking or managing pairs of symbols like Parentheses, Brackets, Braces
+    - Backtracking → recursive call stack - exploring multiple paths or states - DFS
+    - Expression Evaluation → evalute or convert expressions, particulary in postfix, infix form
+
+    
+Stack Operations using list : O(1)
+    - Push → stack.append() → adds element x to the top of the stack
+    - Pop → stack.pop() → removes and returns the top element from the stack 
+    - Peek/Top → stack[-1] → access the top element without removing it 
+    - Is Empty → len(stack) == 0 → check if the stack is empty 
+    - Size → len(stack) → return the number of elements in the stack 
+
+    
+
+Stack Edge Cases:
+    - Empty Stack
+    - Single Element Stack
+    - Nested Elements
+    - Unbalanced Structure 
+    - Unexapted Input Type 
